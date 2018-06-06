@@ -50,7 +50,16 @@ var employees = [
     3. Return the updated employee array.
 */
 
-//Code Here
+function employeeUpdater(){
+  for(var i = 0; i < employees.length; i++){
+    if (employees[i].firstName === "Theo"){
+      employees.splice(i, 1);
+    } else if(employees[i].firstName === "Lorie"){
+      employees[i].department = "HR";
+    }
+  }
+  return employees;
+}
 
 
 
@@ -68,7 +77,16 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
-//Code Here
+function removeDuplicates(arr,){
+  let arr2 = [];
+  return (arr.filter(function(number){
+    if (!arr2.includes(number)){
+      arr2.push(number);
+      return true;
+    } 
+    return false;
+   }))
+}
 
 
 
